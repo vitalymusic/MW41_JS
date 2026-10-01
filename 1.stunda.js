@@ -1,0 +1,74 @@
+// 1. Kods ir jākomentē
+        // 2. Izmantot camelCase -> pirmaisOtraisTresais
+        // 3. Koda bloka apzīmējumam izmantot {}
+        // 4. Katras rindiņas beigās jāliek ;
+
+        // Mainīgie un datu tipi
+
+        let pirmaisSkatlis = 5; //integer
+        let otraisSkaitlis = 10.57; //float
+        let pirmaisTeksts = "Hello World!!!"; //string
+        let otraisTeksts = '<h1>I like JS</h1>';
+        let tresaisTeksts = `
+                                <div class="alert">
+                                    Ko tu dari???
+                                </div>    
+                            `;
+        let sledzis1 = true; //boolean
+            sledzis1 = false;                    
+
+        let datuMasivs = [ //array
+                pirmaisSkatlis,
+                tresaisTeksts,
+                "BMW",
+                ["balta","melna"]
+            ];
+            
+        let masina = {
+            marka:"Audi",
+            modelis:"a4",
+            gads:2020,
+            krasas:["balta","melna","sarkana"],
+            ipasnieks:{
+                        vards:"Jānis",
+                        pilsēta:"Rīga"
+                       }
+        }    
+
+        // informācijas izvade html dokumentā
+
+
+        document.body.innerHTML += masina.ipasnieks.vards;
+
+        // Konkatenācija ir vairāku teksta virkņu apvienojums
+
+          document.body.innerHTML += "<h1>"+pirmaisTeksts+"</h1>";
+          console.log(masina,datuMasivs);
+
+        //   let vards = prompt("Kā tevi sauc???");
+
+        //    document.body.innerHTML+=`
+        //    <h3 style="color:red;font-size:50pt">
+        //         Labdien, ${vards}!
+        //    </h3>`
+
+
+        //    Matemātiskās darbības: + - * / ** 
+
+         let sk1 = +prompt('ievadi pirmo skaitli');
+         let sk2 = +prompt('ievadi otru skaitli');
+
+            let summa = sk1+sk2;
+            let starpiba = sk1-sk2;
+            let reizinajums = sk1*sk2;
+            let dalijums = sk1 / sk2;
+
+
+         document.body.innerHTML += `
+            Skatiļu summa ir: ${summa} <br>
+            
+         `;    
+
+            
+        //  svars / augums**2
+
