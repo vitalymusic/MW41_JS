@@ -33,6 +33,24 @@
             text-align: center;
         }
 
+        .kustiba{
+            animation: vibrate-2 .3s infinite;
+            background-color: rgba(0, 255, 217, 0.586);
+        }
+
+        .out{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap:30px;
+            padding: 30px;
+        }
+        .card{
+            background-color: white;
+            padding: 20px;
+            width:300px;
+        }
+
 
         @keyframes tudi-sudi{
             0%{ transform: translate(0px,0px);}
@@ -43,6 +61,8 @@
             100%{transform: translate(0px,0px);}
         }
 
+        @-webkit-keyframes vibrate-2{0%{-webkit-transform:translate(0);transform:translate(0)}20%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}40%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}60%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}80%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}@keyframes vibrate-2{0%{-webkit-transform:translate(0);transform:translate(0)}20%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}40%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}60%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}80%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}
+
     </style>
 </head>
 <body>
@@ -52,6 +72,8 @@
     <p></p>
 
     <div class="out"></div>
+
+    <img src="" alt="">
 
     <button id="btn1">Button1</button>
     <button id="btn2">Button2</button>
