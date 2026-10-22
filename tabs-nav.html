@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        nav{
+            background-color: aliceblue;
+            padding: 0px 20px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        nav button{
+            border:none;
+            padding:20px;
+            display: block;
+            cursor: pointer;
+            font-size: 15pt;
+
+        }
+        nav button:hover, .button_active{
+            background-color: darkred;
+            color:white;
+            transition: .5s;
+        }
+
+        section{
+            border: 2px solid darkred;
+            padding: 30px;
+            height:80vh;
+            display: none;
+            background-color: rgb(67, 167, 255);
+        }
+
+        .section_active{
+            display: block;
+            animation:swing-in-top-fwd .8s cubic-bezier(.175,.885,.32,1.275) both
+        }
+
+
+        .swing-in-top-fwd{}
+
+
+        @keyframes swing-in-top-fwd{0%{transform:rotateX(-100deg);transform-origin:top;opacity:0}100%{transform:rotateX(0deg);transform-origin:top;opacity:1}}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <button data-section="sec1">Sākums</button>
+        <button data-section="sec2">Par mums</button>
+        <button data-section="sec3">Galerija</button>
+        <button data-section="sec4">Kontakti</button>
+    </nav>
+    <main>
+        <section id="sec1">
+            <h1>Sākums</h1>
+        </section>
+        <section id="sec2">
+            <h1>Par mums</h1>
+        </section>
+        <section id="sec3">
+            <h1>Galerija</h1>
+        </section>
+        <section id="sec4">
+            <h1>Kontakti</h1>
+        </section>
+    </main>
+
+
+
+    <script>
+        let buttons = document.querySelectorAll('nav button');
+        let sections = document.querySelectorAll('section');
+
+        for(button of buttons){
+            button.onclick = (e)=>{
+                 for(button of buttons){
+                        button.classList.remove('button_active')
+                 }
+
+                 for(section of sections){
+                        section.classList.remove('section_active')
+                 }
+
+
+
+                e.target.classList.add('button_active');
+                elID = e.target.dataset.section;
+                 document.querySelector('#'+elID).classList.add('section_active');
+            }
+
+
+        }
+
+
+        buttons[0].click();
+    </script>
+</body>
+</html>
