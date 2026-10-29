@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartiņu filtrs</title>
+
+    <style>
+        .filter_buttons{
+            display: flex;
+            justify-content: center;
+            gap:20px;
+        }
+
+        .filter_cards{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap:20px;
+            width:75%;
+
+        }
+
+
+         .filter_cards .card{
+            width:300px;
+            height: 300px;
+            border:1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="filter">
+        <div class="filter_buttons">
+            <button data-cat="all">Visas kategorijas</button>
+            <button data-cat="html">HTML</button>
+            <button data-cat="css">CSS</button>
+            <button data-cat="js">Javascript</button>
+        </div>
+        <div class="filter_cards">
+            <div class="card" data-cat="html">
+                <h1>HTML1</h1>
+            </div>
+            <div class="card" data-cat="html">
+                <h1>HTML2</h1>
+            </div>
+            <div class="card" data-cat="html">
+                <h1>HTML3</h1>
+            </div>
+             <div class="card" data-cat="css">
+                <h1>CSS1</h1>
+            </div>
+             <div class="card" data-cat="css">
+                <h1>CSS2</h1>
+            </div>
+             <div class="card" data-cat="css">
+                <h1>CSS3</h1>
+            </div>
+            <div class="card" data-cat="js">
+                <h1>JacaScript1</h1>
+            </div>
+            <div class="card" data-cat="js">
+                <h1>JacaScript2</h1>
+            </div>
+            <div class="card" data-cat="js">
+                <h1>JacaScript3</h1>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
