@@ -32,6 +32,11 @@
             align-items: center;
          }
 
+
+         .card[data-cat="html"]{background: rgb(200, 255, 0);}
+         .card[data-cat="css"]{background: rgb(0, 162, 255)}
+         .card[data-cat="js"]{background: rgb(251, 79, 249);}
+
     </style>
 </head>
 <body>
@@ -43,11 +48,12 @@
             <button data-cat="js">Javascript</button>
         </div>
         <div class="filter_cards">
-            <div class="card" data-cat="html">
-                <h1>HTML1</h1>
-            </div>
+            
             <div class="card" data-cat="html">
                 <h1>HTML2</h1>
+            </div>
+             <div class="card" data-cat="js">
+                <h1>JacaScript2</h1>
             </div>
             <div class="card" data-cat="html">
                 <h1>HTML3</h1>
@@ -55,24 +61,71 @@
              <div class="card" data-cat="css">
                 <h1>CSS1</h1>
             </div>
+            <div class="card" data-cat="html">
+                <h1>HTML1</h1>
+            </div>
              <div class="card" data-cat="css">
                 <h1>CSS2</h1>
             </div>
-             <div class="card" data-cat="css">
+             
+             <div class="card" data-cat="js">
+                <h1>JacaScript3</h1>
+            </div>
+            <div class="card" data-cat="css">
                 <h1>CSS3</h1>
             </div>
             <div class="card" data-cat="js">
                 <h1>JacaScript1</h1>
             </div>
-            <div class="card" data-cat="js">
-                <h1>JacaScript2</h1>
-            </div>
-            <div class="card" data-cat="js">
-                <h1>JacaScript3</h1>
-            </div>
+           
+           
 
         </div>
 
     </div>
+
+
+    <div class="mobile_nav">
+        <button>Close</button>
+
+        <a href="">Par mums</a>
+        <a href="">Pakalpojumi</a>
+        <a href="">Cenas</a>
+        <a href="">Kontakti</a>
+
+    </div>
+
+
+    <script>
+        let filter_buttons = document.querySelectorAll('.filter_buttons button');
+
+
+        let filter_cards = document.querySelectorAll('.filter_cards .card');
+
+        for(button of filter_buttons){
+            button.onclick = (e)=>{
+                  filterItems(e.target.dataset.cat)  
+            }
+
+        }
+
+        function filterItems(category){
+            console.log(category);
+
+            for(card of filter_cards){
+                if(category=="all"){
+                     card.style.display="flex"
+                }else if(card.dataset.cat==category){
+                        card.style.display="flex"
+                }else{
+                    card.style.display="none"
+                }
+
+            }
+        }
+
+
+
+    </script>
 </body>
 </html>
