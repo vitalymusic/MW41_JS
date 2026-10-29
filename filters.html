@@ -37,9 +37,33 @@
          .card[data-cat="css"]{background: rgb(0, 162, 255)}
          .card[data-cat="js"]{background: rgb(251, 79, 249);}
 
+
+         .mobile_nav{
+            position: absolute;
+            left:0px;
+            top:0px;
+            width:0px;
+            height:100vh;
+            background-color: black;
+            z-index: 10;
+            padding:20px;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            a{
+                color:white;
+                font-size: 3rem;
+                display: block;
+            }
+
+         }
     </style>
 </head>
 <body>
+    <nav>
+        <button onclick="openNav()">Menu</button>
+    </nav>
+
     <div class="filter">
         <div class="filter_buttons">
             <button data-cat="all">Visas kategorijas</button>
@@ -85,8 +109,9 @@
     </div>
 
 
+
     <div class="mobile_nav">
-        <button>Close</button>
+        <button onclick="closeNav()">Close</button>
 
         <a href="">Par mums</a>
         <a href="">Pakalpojumi</a>
@@ -125,6 +150,19 @@
         }
 
 
+
+
+    </script>
+
+
+    <script>
+        let mobileNav = document.querySelector('.mobile_nav');
+        function openNav(){
+            mobileNav.style.width="300px";
+        }
+        function closeNav(){
+            mobileNav.style.width="0px";
+        }
 
     </script>
 </body>
